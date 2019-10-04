@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".AddProperty">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="SQLite Insert Into Database"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="27dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="District Code"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="37dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Company name"
+                android:inputType="text" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText2"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                app:hintEnabled="false">
+
+                <!-- Text Label -->
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="5dp"
+                    android:text="Registration no:"
+                    android:textSize="20dp" />
+
+                <!-- Spinner Element -->
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <EditText
+                android:id="@+id/nameofowner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="37dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Name of Owner"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/contactno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameofowner"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="37dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Contact no. (Landline/Mobile)"
+                android:inputType="text" />
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contactno"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="46dp"
+                android:text="Insert Into SQLite Database" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:text="Display SQLite Database Data into ListView" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
